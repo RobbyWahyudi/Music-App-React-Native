@@ -1,12 +1,12 @@
 import {View, Text} from 'react-native';
 import React from 'react';
+import {NavigationContainer} from '@react-navigation/native';
+import BottomTabs from './components/BottomTabs';
 
-const App = () => {
+export default function App() {
   return (
-    <View>
-      <Text>App</Text>
-    </View>
+    <NavigationContainer>
+      <BottomTabs />
+    </NavigationContainer>
   );
-};
-
-export default App;
+}
