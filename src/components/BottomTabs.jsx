@@ -12,7 +12,10 @@ export default function BottomTabs() {
     <Tab.Navigator
       initialRouteName="Beranda"
       screenOptions={({route}) => ({
-        tabBarStyle: {backgroundColor: '#191717'},
+        tabBarStyle: {
+          backgroundColor: '#191717',
+          paddingBottom: 2,
+        },
         tabBarActiveTintColor: 'white',
         inactiveTintColor: '#dfe7e7',
         headerShown: false,

@@ -1,6 +1,7 @@
-import {StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, Text, View, TouchableOpacity} from 'react-native';
 import React from 'react';
 import Feather from 'react-native-vector-icons/Feather';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
 const Jelajahi = () => {
   return (
@@ -11,7 +12,13 @@ const Jelajahi = () => {
           <Text style={styles.searchText}>Lagu</Text>
         </View>
 
-        <Feather name="music" size={26} color="white" />
+        <TouchableOpacity>
+          <MaterialCommunityIcons
+            name="music-circle-outline"
+            size={35}
+            color="white"
+          />
+        </TouchableOpacity>
       </View>
     </View>
   );
@@ -29,13 +36,15 @@ const styles = StyleSheet.create({
   headerContainer: {
     display: 'flex',
     flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
   },
 
   search: {
     display: 'flex',
     flexDirection: 'row',
     alignItems: 'center',
-    width: '80%',
+    width: '85%',
     height: 38,
     backgroundColor: 'white',
     borderRadius: 8,
