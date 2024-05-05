@@ -1,7 +1,6 @@
 import {StyleSheet, Text, View, TouchableOpacity, Image} from 'react-native';
 import React from 'react';
 import Feather from 'react-native-vector-icons/Feather';
-import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
 const Beranda = () => {
   return (
@@ -19,7 +18,7 @@ const Beranda = () => {
 
       <Image
         source={{
-          uri: 'https://upload.wikimedia.org/wikipedia/en/7/7a/Djo_-_End_of_Beginning_single_cover.png',
+          uri: 'https://i1.sndcdn.com/artworks-aIQTEaD3BVWhMWSm-yHz4NA-t500x500.jpg',
         }}
         style={styles.songImage}
       />
@@ -58,5 +57,8 @@ const styles = StyleSheet.create({
     marginLeft: 3,
   },
 
-  songImage: {width: '100%', height: 370},
+  songImage: {
+    width: '100%',
+    aspectRatio: 1,
+  },
 });
