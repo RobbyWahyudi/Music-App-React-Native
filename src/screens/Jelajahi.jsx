@@ -12,7 +12,7 @@ const Jelajahi = () => {
           <Text style={styles.searchText}>Lagu</Text>
         </View>
 
-        <TouchableOpacity>
+        <TouchableOpacity style={{right: -2}}>
           <MaterialCommunityIcons
             name="music-circle-outline"
             size={35}
@@ -44,7 +44,7 @@ const styles = StyleSheet.create({
     display: 'flex',
     flexDirection: 'row',
     alignItems: 'center',
-    width: '85%',
+    width: '88%',
     height: 38,
     backgroundColor: 'white',
     borderRadius: 8,

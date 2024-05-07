@@ -3,14 +3,16 @@ import React from 'react';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import Feather from 'react-native-vector-icons/Feather';
 
-const Saya = () => {
+const Saya = ({navigation}) => {
   const alertLangganan = () =>
     Alert.alert('Langganan', 'Anda sudah berlangganan', [{text: 'OK'}]);
+
   return (
     <View style={styles.container}>
       <View style={styles.headerContainer}>
         <View style={styles.accountContainer}>
           <MaterialCommunityIcons
+            onPress={() => navigation.navigate('Akun')}
             name="account-circle"
             size={75}
             color="salmon"
@@ -30,11 +32,11 @@ const Saya = () => {
         </View>
 
         <View style={styles.options}>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={() => navigation.navigate('Notifikasi')}>
             <Feather name="bell" size={24} color="white" />
           </TouchableOpacity>
 
-          <TouchableOpacity>
+          <TouchableOpacity onPress={() => navigation.navigate('Pengaturan')}>
             <Feather name="settings" size={24} color="white" />
           </TouchableOpacity>
         </View>
@@ -67,7 +69,7 @@ const styles = StyleSheet.create({
   accountName: {
     display: 'flex',
     justifyContent: 'space-between',
-    paddingBottom: 5,
+    paddingBottom: 7,
   },
 
   langganan: {
